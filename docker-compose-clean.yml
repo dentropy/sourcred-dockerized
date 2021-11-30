@@ -18,5 +18,5 @@ services:
       - ./sourcecred.json:/template-instance/sourcecred.json
     ports:
       - 6006:6006
-    entrypoint: yarn start
-
+    # restart: unless-stopped
+    entrypoint: yarn clean
