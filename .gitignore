@@ -1,0 +1,7 @@
+config
+datra
+*.json
+template-instance
+yarn*
+data
+.env
