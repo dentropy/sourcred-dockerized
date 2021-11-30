@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  sourcecred:
+    container_name: sourcecred
+    hostname: sourcecred
+    image: sourcecred
+    environment:
+      - SOURCECRED_DISCORD_TOKEN:"OTE0OTYxNDgzMTc4MzE1ODI2.YaUqSA.9-QeqwIt4fr5zl3f1VB-MVBBoxk"
+    volumes:
+      - ./.env:/template-instance/.env
+      - ./config:/template-instance/config
+      - ./data:/template-instance/data
+      - ./site:/template-instance/site
+      - ./output:/template-instance/output
+      - ./cache:/template-instance/cache
+      - ./sourcecred.json:/template-instance/sourcecred.json
+    ports:
+      - 6006:6006
+    # restart: unless-stopped
+    # entrypoint: yarn load
+    entrypoint: yarn start
+    # entrypoint: yarn start
+    # entrypoint: yarn clean
