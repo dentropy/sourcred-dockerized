@@ -32,3 +32,11 @@ docker-compose logs
 * [Discord | SourceCred](https://sourcecred.io/docs/beta/plugins/discord)
 * [Discord Developer Portal — My Applications](https://discord.com/developers/applications)
 * [Discord Developer Portal — Documentation — OAuth2](https://discord.com/developers/docs/topics/oauth2#bots)
+
+## TODO
+
+* Build node_modules in [ubuntu](https://hub.docker.com/_/ubuntu) container and copy them to a [node](https://hub.docker.com/_/node) container
+* Get `yarn load` working from inside the container
+* Traefik integration for HTTPs
+* Have volume mounts fed in via environment variables
+* Backup and restore script
