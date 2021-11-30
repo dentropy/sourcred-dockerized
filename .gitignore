@@ -6,3 +6,7 @@ yarn*
 data
 .env
 Sourcred-README.md
+cache
+node_modules
+output
+site

@@ -16,9 +16,19 @@ cp env.example .env
 # Add "sourcecred/discord" to the sourcecred.json list
 # add guildID to /config/plugins/sourcecred/discord/config.json 
 # Add channelID from guild to propsChanels channelID /config/plugins/sourcecred/discord/config.json 
-docker-compose -f docker-compose-setup.yml up
-docker-compose -f docker-compose-setup.yml down
+
+# `yarn load` does not work inside the container yet
+yarn
+yarn load
+# docker-compose -f docker-compose-setup.yml up
+# docker-compose -f docker-compose-setup.yml down
 docker-compose -f docker-compose.yml up -d
+docker-compose logs
+# docker-compose -f docker-compose-clean.yml up
 ```
 
-# [Discord | SourceCred](https://sourcecred.io/docs/beta/plugins/discord)
+## External Links
+
+* [Discord | SourceCred](https://sourcecred.io/docs/beta/plugins/discord)
+* [Discord Developer Portal — My Applications](https://discord.com/developers/applications)
+* [Discord Developer Portal — Documentation — OAuth2](https://discord.com/developers/docs/topics/oauth2#bots)
